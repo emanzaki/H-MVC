@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Customers config file
+ * 
+ */
 return [
     'prefix' => [
         'backend' =>'backend',
