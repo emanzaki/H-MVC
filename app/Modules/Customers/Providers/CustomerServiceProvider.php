@@ -3,7 +3,7 @@
 namespace Customers\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Support\Facades\File;
 class CustomerServiceProvider extends ServiceProvider
 {
     /**
@@ -20,6 +20,7 @@ class CustomerServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $ds= DIRECTORY_SEPARATOR;
+        config(['route' => File::getRequire(__DIR__ . $ds . '..' . $ds . 'config' . $ds . 'route.php')]);
         $this->loadRoutesFrom(__DIR__.$ds.'..'.$ds.'routes'.$ds.'web.php');
     }
 }
