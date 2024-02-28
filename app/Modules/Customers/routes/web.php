@@ -13,4 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', dd(__DIR__));
+Route::namespace('Customers\Http\Controllers')->group(function(){
+    Route::prefix('backend')->namespace('Backend')->group(function(){
+        Route::get('customers','Customers@index');
+        }
+    );
+    Route::prefix('frontend')->namespace('Frontend')->group(function () {
+        Route::get('customers', 'Customers@index');
+        }
+    );
+});
