@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::namespace('Customers\Http\Controllers')->group(function(){
-    Route::prefix(config('customers.prefix.backend',config('module.prefix.backend')))->namespace('Backend')->group(function(){
-        Route::get('customers','Customers@index');
+    Route::prefix(config('customers.prefix.backend',config('module.prefix.backend')).'/'.config('customers.module-name'))->namespace('Backend')->group(function(){
+        Route::get('all','Customers@index');
         }
     );
-    Route::prefix(config('customers.prefix.frontend', config('module.prefix.frontend')))->namespace('Frontend')->group(function () {
-        Route::get('customers', 'Customers@index');
+    Route::prefix(config('customers.prefix.frontend', config('module.prefix.frontend')).'/'.config('customers.module-name'))->namespace('Frontend')->group(function () {
+        Route::get('all', 'Customers@index');
         }
     );
 });
