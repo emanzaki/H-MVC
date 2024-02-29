@@ -58,7 +58,6 @@ This repository demonstrates the implementation of HMVC (Hierarchical Model-View
         - **Middleware**
         - **Controllers**
         
-
 - **config**
 - **resources**
   - **views**
