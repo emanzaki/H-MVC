@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::namespace('Customers\Http\Controllers')->group(function(){
+Route::namespace('Customers\Http\Controllers')->middleware('customer')->group(function(){
     Route::prefix(buildPrefix('customers'))->namespace('Backend')->group(function(){
         Route::get('all','Customers@index');
         }
