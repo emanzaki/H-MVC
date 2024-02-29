@@ -12,10 +12,8 @@ class Customer extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::create([
-            'name'=>'asdasd',
-            'email'=>'asd@asd.com',
-            'password'=>bcrypt('password')
+        \Customers\Models\Customer::create([
+            'name'=>'asdasd'
         ]);
     }
 }
