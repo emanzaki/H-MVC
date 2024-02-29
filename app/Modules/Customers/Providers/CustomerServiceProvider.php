@@ -24,5 +24,6 @@ class CustomerServiceProvider extends ServiceProvider
         config([$moduleName => File::getRequire(__DIR__ . $ds . '..' . $ds . 'config' . $ds . 'route.php')]);
         $this->loadRoutesFrom(__DIR__.$ds.'..'.$ds.'routes'.$ds.'web.php');
         $this->loadViewsFrom(__DIR__ . $ds . '..' . $ds . 'resources' . $ds . 'views', $moduleName);
+        $this->loadMigrationsFrom(__DIR__ . $ds . '..' . $ds . 'database' . $ds . 'migrations');
     }
 }
