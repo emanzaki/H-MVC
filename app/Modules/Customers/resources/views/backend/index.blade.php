@@ -1,3 +1,4 @@
+@lang('customers::index.index')
 <!DOCTYPE html>
 <html lang="en">
 
