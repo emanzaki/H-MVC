@@ -24,13 +24,8 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Customers\\Seeders\\": "app/Modules/Customers/database/seeds",
-            "Customers\\": "app/Modules/Customers"
-        },
-        "files":[
-            "app/helpers/route.php"
-        ]
+            "Database\\Seeders\\": "database/seeders/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
